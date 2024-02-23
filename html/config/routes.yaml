@@ -1,0 +1,63 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+### User
+
+create_user:
+    path: /user
+    controller: App\Controller\UserController::createUser
+    methods: POST
+
+fetch_user:
+    path: /user/{id}
+    controller: App\Controller\UserController::fetchUser
+    methods: GET
+
+get_users:
+    path: /user
+    controller: App\Controller\UserController::getUsers
+    methods: GET
+
+update_user:
+    path: /user/{id}
+    controller: App\Controller\UserController::updateUser
+    methods: PUT
+
+delete_user:
+    path: /user/{id}
+    controller: App\Controller\UserController::deleteUser
+    methods: DELETE
+
+
+get_user_tasks:
+    path: /user/{id}/tasks
+    controller: App\Controller\UserController::fetchUserTasks
+    methods: GET
+
+### Task
+
+create_task:
+    path: /task
+    controller: App\Controller\TaskController::createTask
+    methods: POST
+
+get_task:
+    path: /task/{id}
+    controller: App\Controller\TaskController::fetchTask
+    methods: GET
+
+get_tasks:
+    path: /task
+    controller: App\Controller\TaskController::getTasks
+    methods: GET
+
+update_task:
+    path: /task/{id}
+    controller: App\Controller\TaskController::updateTask
+    methods: PUT
+
+delete_task:
+    path: /task/{id}
+    controller: App\Controller\TaskController::deleteTask
+    methods: DELETE
